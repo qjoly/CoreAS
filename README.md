@@ -5,6 +5,19 @@
 
 It's been few months since I registered my own ASN (*AS209238*) but I never had the occasion to use it, my ISP doesn't support BGP and OVH support [only IPv4 for their bgp service](https://help.ovhcloud.com/csm/fr-network-bgp-service-configuration?id=kb_article_view&sysparm_article=KB0066887). So I decided to host my own server in a community datacenter that accepts my ASN.
 
+
+## Hardware
+
+The server is a [MS-01](https://minisforumpc.fr/products/minisforum-ms-01-work-station?variant=49292163187005) with the following specs :
+- CPU : Intel Core i9-12900H
+- RAM : 96 Go DDR4
+- Stockage : 3x2 To NVMe SSD
+
+This server is pretty powerful for a home server and has a BMC (IPMI) interface which is a must-have for remote management, I'll probably never use it since it is quite limited compared to the NanoKVM.
+
+Talk about the NanoKVM, I bought both a NanoKVM **and** a JetKVM (because I wasn't sure which one would work best with this server). Even if the JetKVM is more powerful, has more features and a better UI, I ended up using the NanoKVM because it can set a static IP address (it is technically possible with the [JetKVM but requires to edit a specific file that could be reset on firmware update](https://github.com/jetkvm/kvm/issues/37#issuecomment-2622197252)). 
+
+
 ## Install OS
 
 I chose Fedora CoreOS as OS, I like the idea of an immutable OS and :
