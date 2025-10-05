@@ -1,0 +1,12 @@
+variant: fcos
+version: 1.6.0
+boot_device:
+  device: /dev/nvme0n1
+  luks:
+    tpm2: true
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYIcGSg3gbOUmhShKQ2XvtfRpG4n3pRq7WITC8Dt71u"
